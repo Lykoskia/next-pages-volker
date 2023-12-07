@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My First Next.js app
 
-## Getting Started
+## Overview
 
-First, run the development server:
+A modern showcase and a testament to contemporary web practices, this Next.js project is the evolution of a static site into a performant, statically generated application. Hosted with Vercel for superior delivery.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technical Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js SSG**: Utilizes `getStaticProps` and `getStaticPaths` for enhanced performance and SEO.
+- **Tailwind CSS**: Employs Tailwind for responsive styling and conditional rendering of a sticky footer on desktop.
+- **Interactive UI**: Images that scale on hover, carousels for visual storytelling, and expandable 'Read more' sections.
+- **Performance**: Lazy loading and deferred loading of off-screen images for a seamless user experience.
+- **I18n**: Supports multiple languages with dynamic routing and imports, providing a global UX.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Development Insights
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The project's transition from a static HTML/CSS to a dynamic Next.js app illuminated the power of modern frameworks.
 
-## Learn More
+## Lighthouse Scores
 
-To learn more about Next.js, take a look at the following resources:
+Proudly achieves a perfect Lighthouse score on desktop, showcasing the site's commitment to excellence in web performance metrics.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## History
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I originally built this website in late 2022 by directly writing HTML/CSS files, and all of my JavaScript could fit into a single page of jQuery methods.
+Unsatisfied with full page reloads, unoptimized images, and eager to apply everything I've learned about React (and Next) since then, I set out to modernize this webpage in late 2023.
+Currently waiting for new card images from the client, and possibly content updates, but as far as features go, everything is implemented and working as intended.
