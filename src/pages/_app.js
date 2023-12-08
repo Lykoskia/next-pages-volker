@@ -71,7 +71,7 @@ export default function MyApp({ Component, pageProps, router }) {
                     },
                     {
                         name: 'robots',
-                        content: 'noindex, nofollow'
+                        content: 'index, follow'
                     },
                 ]}
                 openGraph={{
