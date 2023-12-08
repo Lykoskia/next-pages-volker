@@ -7,21 +7,22 @@ import { DefaultSeo } from 'next-seo';
 import { DarkModeProvider } from '@/contexts/DarkModeContext';
 import { SelectedPageProvider } from '@/contexts/SelectedPageContext';
 import BackToTopButton from '@/components/BackToTopButton';
+import { useRouter } from 'next/router';
 
-export default function MyApp({ Component, pageProps, router }) {
+export default function MyApp({ Component, pageProps }) {
+    const router = useRouter();
     const { translations = {}, seo } = pageProps;
-    const { locale, query } = router;
+    const { locale, asPath } = router;
 
     const capitalize = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
 
-    const page = query.page ? ` | ${capitalize(query.page)}` : '';
-    const section = query.section ? ` - ${capitalize(query.section)}` : '';
+    const page = router.query.page ? ` | ${capitalize(router.query.page)}` : '';
+    const section = router.query.section ? ` - ${capitalize(router.query.section)}` : '';
     const title = `Volker Hengst ${translations[page.toLowerCase()] || page}${translations[section.toLowerCase()] || section}`;
 
     useEffect(() => {
         document.title = title;
     }, [title]);
-
 
     const seoConfig = {
         en: {
@@ -46,6 +47,12 @@ export default function MyApp({ Component, pageProps, router }) {
 
     const currentSEO = seo || seoConfig[locale] || seoConfig['en'];
 
+    const alternateUrls = {
+        en: 'https://www.volkerhengst.com',
+        de: 'https://www.volkerhengst.com/de',
+        hr: 'https://www.volkerhengst.com/hr',
+    };
+
     return (
         <React.Fragment>
             <Head>
@@ -55,6 +62,14 @@ export default function MyApp({ Component, pageProps, router }) {
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://api.openweathermap.org" crossorigin />
                 <link rel="preload" href="/img/ck.jpg" as="image" />
+                {Object.entries(alternateUrls).map(([lang, url]) => (
+                    <link
+                        rel="alternate"
+                        hreflang={lang}
+                        href={`${url}${asPath}`}
+                        key={lang}
+                    />
+                ))}
             </Head>
 
             <DefaultSeo
