@@ -59,6 +59,7 @@ export default function MyApp({ Component, pageProps }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta charSet="utf-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="google-site-verification" content="Wy3pwQcuao_CRkx7mrlmlTDwJKFytVtXO1b6UoGsBWE" />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://api.openweathermap.org" crossorigin />
                 <link rel="preload" href="/img/ck.jpg" as="image" />
