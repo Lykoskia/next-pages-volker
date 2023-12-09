@@ -26,6 +26,7 @@ I originally built this website in late 2022 by directly writing HTML/CSS files,
 Unsatisfied with full page reloads, unoptimized images, and eager to apply everything I've learned about React (and Next) since then, I set out to modernize this website in late 2023.
 Currently waiting for new card images from the client, and possibly content updates, but as far as features go, everything is implemented and working as intended.
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Lykoskia/next-pages-volker/master/LH1.png" alt="meme not sharing source code out of shame" width="500" height="250"/>
-  <img src="https://raw.githubusercontent.com/Lykoskia/next-pages-volker/master/LH2.png" alt="meme not sharing source code out of shame" width="500" height="250"/>
+  <img src="https://raw.githubusercontent.com/Lykoskia/next-pages-volker/master/LH1.png" alt="meme not sharing source code out of shame" width="800" height="400"/>
+  <br>
+  <img src="https://raw.githubusercontent.com/Lykoskia/next-pages-volker/master/LH2.png" alt="meme not sharing source code out of shame" width="800" height="400"/>
 </p>
