@@ -27,6 +27,7 @@ Unsatisfied with full page reloads, unoptimized images, and eager to apply every
 Currently waiting for new card images from the client, and possibly content updates, but as far as features go, everything is implemented and working as intended.
 <p align="center">
   <img src="https://raw.githubusercontent.com/Lykoskia/next-pages-volker/master/LH1.png" alt="meme not sharing source code out of shame" width="800" height="400"/>
-  <br>
+</p>
+<p align="center">
   <img src="https://raw.githubusercontent.com/Lykoskia/next-pages-volker/master/LH2.png" alt="meme not sharing source code out of shame" width="800" height="400"/>
 </p>
