@@ -71,6 +71,12 @@ export default function MyApp({ Component, pageProps }) {
                         key={lang}
                     />
                 ))}
+                {locale === 'en' && (
+                    <link
+                        rel="canonical"
+                        href={`https://www.volkerhengst.com${asPath}`}
+                    />
+                )}
             </Head>
 
             <DefaultSeo
