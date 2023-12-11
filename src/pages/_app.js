@@ -74,7 +74,7 @@ export default function MyApp({ Component, pageProps }) {
                 {locale === 'en' && (
                     <link
                         rel="canonical"
-                        href={`https://www.volkerhengst.com${asPath}`}
+                        href={`https://volkerhengst.com${asPath}`}
                     />
                 )}
             </Head>
