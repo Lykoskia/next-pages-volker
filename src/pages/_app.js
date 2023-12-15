@@ -9,6 +9,7 @@ import { SelectedPageProvider } from '@/contexts/SelectedPageContext';
 import BackToTopButton from '@/components/BackToTopButton';
 import { useRouter } from 'next/router';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -116,6 +117,7 @@ export default function MyApp({ Component, pageProps }) {
                     </section>
                     <Footer />
                     <BackToTopButton />
+                    <Analytics />
                     <SpeedInsights />
                 </DarkModeProvider>
             </SelectedPageProvider>
