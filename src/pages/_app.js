@@ -8,6 +8,7 @@ import { DarkModeProvider } from '@/contexts/DarkModeContext';
 import { SelectedPageProvider } from '@/contexts/SelectedPageContext';
 import BackToTopButton from '@/components/BackToTopButton';
 import { useRouter } from 'next/router';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -115,6 +116,7 @@ export default function MyApp({ Component, pageProps }) {
                     </section>
                     <Footer />
                     <BackToTopButton />
+                    <SpeedInsights />
                 </DarkModeProvider>
             </SelectedPageProvider>
         </React.Fragment>
