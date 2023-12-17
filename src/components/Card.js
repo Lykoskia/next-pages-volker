@@ -4,13 +4,13 @@ import Image from 'next/image';
 export default function Card({ title, content, imageUrl }) {
     return (
         <div className="max-w-[300px] w-full rounded shadow-lg bg-white hover:bg-gray-300 dark:bg-gray-900 dark:hover:bg-gray-800 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl ring-1 mx-auto">
-            <div className="relative w-full max-w-[300px] h-[500px] mx-auto p-2">
+            <div className="relative w-full max-w-[300px] h-[400px] mx-auto p-2">
                 <Image 
                     src={imageUrl} 
                     alt="Card Image" 
                     layout="responsive"
                     width={300}
-                    height={500}
+                    height={400}
                     objectFit="contain"
                     className="rounded-t-lg"
                 />

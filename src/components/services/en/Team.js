@@ -23,7 +23,7 @@ export default function Team() {
                 <Card
                     title="Marko"
                     content=""
-                    imageUrl="/img/300x500.gif"
+                    imageUrl="/img/marko.jpg"
                 />
                 <Card
                     title="Simone"
