@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Card from '@/components/Card';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
@@ -6,9 +6,40 @@ import { CheckCircleIcon } from '@heroicons/react/24/solid';
 export default function Team() {
 
     const [showMore, setShowMore] = useState(false);
+    const volkerRef = useRef(null);
+    const markoRef = useRef(null);
+    const simoneRef = useRef(null);
 
     const displayMoreText = "Pročitaj više";
     const displayLessText = "Prikaži manje";
+
+    const scrollToPerson = (person) => {
+        let ref;
+        if (person === 'Volker') ref = volkerRef;
+        if (person === 'Marko') ref = markoRef;
+        if (person === 'Simone') ref = simoneRef;
+
+        if (ref && ref.current) {
+            const offsetTop = ref.current.offsetTop;
+            const navbarHeight = 64;
+            window.scrollTo({
+                top: offsetTop - navbarHeight,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    const handleCardClick = (person) => {
+        if (!showMore) {
+            setShowMore(true);
+        }
+        setTimeout(() => scrollToPerson(person), 100)
+
+    };
+
+    const toggleShowMore = () => {
+        setShowMore(!showMore);
+    };
 
     const previewContent = (
 
@@ -19,26 +50,30 @@ export default function Team() {
                     title="Volker"
                     content=""
                     imageUrl="/img/volker2.jpg"
+                    onClick={() => handleCardClick('Volker')}
                 />
                 <Card
                     title="Marko"
                     content=""
                     imageUrl="/img/marko.jpg"
+                    onClick={() => handleCardClick('Marko')}
                 />
                 <Card
                     title="Simone"
                     content=""
                     imageUrl="/img/simone.jpg"
+                    onClick={() => handleCardClick('Simone')}
                 />
             </div>
         </React.Fragment>
 
     );
 
-    const fullContent = (
-
-        <React.Fragment>
-            <ul>
+    const VolkerContent = () => {
+        return (
+            <section ref={volkerRef}>
+                <h2 className="text-center font-bold text-xl mb-5 py-5">Volker Hengst</h2>
+                <ul>
                 <li className="style-none"><CheckCircleIcon className="w-5 h-5 mr-1 text-green-700 inline" />ViSdP: Volker Hengst</li>
                 <li className="style-none"><CheckCircleIcon className="w-5 h-5 mr-1 text-green-700 inline" />Zaštita podataka</li>
                 <li className="style-none"><CheckCircleIcon className="w-5 h-5 mr-1 text-green-700 inline" />Garancija za moje usluge</li>
@@ -51,12 +86,36 @@ export default function Team() {
             <p className="text-justify mb-5">Ne snosim odgovornost za pogreške koje naprave tvrtke u svojim informacijama, kašnjenjima ili izvršenju. Međutim, dat ću sve od sebe da u vaše ime ispravim nedostatke na vašu štetu.</p>
 
             <p className="text-justify mb-5">Kako bih mogao sudjelovati na za Vas ključnim sastancima s Nadzorom, građevinskim tvrtkama i obrtnicima, surađujem s partnerom Marcom Vukelićem iz građevinske branše koji mi pomaže u sastancima i razgovorima. Na tim susretima se govori hrvatski i bilo mi je važno da timski djelujem s nekim izvornim govornikom hrvatskog. Njegove usluge su već uključene u cijenu.</p>
-            <h2 className="text-center font-bold text-xl mb-5 py-5">Marko Vukelić</h2>
+            </section>
+        )
+    }
+
+    const MarkoContent = () => {
+        return (
+            <section ref={markoRef}>
+                <h2 className="text-center font-bold text-xl mb-5 py-5">Marko Vukelić</h2>
             <p className="text-justify mb-5">Marko Vukelić, 28 godina, odrastao u Novom Vinodolskom, otac šumar, majka arhitektica. Pod prirodnim utjecajem svoje majke, od rane sam mladosti bio fasciniran gradnjom i planiranjem kuća. Od svoje 12. godine pomagao sam majci u uredu. Kasnije sam se orijentirao na tehničko građenje i upisao Građevinski fakultet u Rijeci. Kao što se očekuje, diplomu ću dobiti uskoro (2024.).</p>
             <p className="text-justify mb-5">Hrvatska je danas vrlo popularna zemlja za investitore, posebno iz centralne Europe. Budući da vrlo malo inženjera ovdje govori strani jezik, ovo je posebno moja niša na tržištu. Htio bih podržati strane investitore s građevinske strane da ih se ovdje podrži za njihove nove kuće. Bit ću vaše sučelje s Volkerom Hengstom na sastancima koji će se odvijati na hrvatskom jeziku. I u graditeljskom i u lingvističkom području.</p>
-            <h2 className="text-center font-bold text-xl mb-5 py-5">Simone Stampa</h2>
+            </section>
+        )
+    }
+
+    const SimoneContent = () => {
+        return (
+            <section ref={simoneRef}>
+                <h2 className="text-center font-bold text-xl mb-5 py-5">Simone Stampa</h2>
             <p className="text-justify mb-5">Ako želite imati kuću dovršenu s unutarnjim dizajnom ili potpuno namještenu, Simone Stampa bi bila dama koju bih vam preporučio. Osim znanja o dizajnu interijera i praktičnosti, vrlo je dobro informirana o akcijama, popustima i kvalitetama okolnih trgovina namještajem i studija za dizajn interijera. Ova usluga nije uključena u cijenu i podložna je dogovoru. Ako želite uključiti gospođu Stampa u svoja razmatranja, obratite se i ovoj web stranici.</p>
             <p className="text-justify mb-5">Ako želite dobiti kuću po sistemu ključ u ruke ili kompletno namještenu, nudimo i ovu uslugu. Cijene i detalji za ovo po potrebi i dogovoru.</p>
+            </section>
+        )
+    }
+
+    const fullContent = (
+
+        <React.Fragment>
+            <VolkerContent />
+            <MarkoContent />
+            <SimoneContent />
         </React.Fragment>
 
     );
@@ -68,7 +127,7 @@ export default function Team() {
             {showMore && fullContent}
             <div className="text-center mt-8">
                 <button
-                    onClick={() => setShowMore(!showMore)}
+                    onClick={toggleShowMore}
                     className={`${showMore ? 'danger-button' : 'success-button'}`}
                 >
                     {showMore ? displayLessText : displayMoreText}

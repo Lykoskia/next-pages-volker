@@ -1,9 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 
-export default function Card({ title, content, imageUrl }) {
+export default function Card({ title, content, imageUrl, onClick }) {
     return (
-        <div className="max-w-[300px] w-full rounded shadow-lg bg-white hover:bg-gray-300 dark:bg-gray-900 dark:hover:bg-gray-800 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl ring-1 mx-auto">
+        <div
+            onClick={onClick} 
+            className="max-w-[300px] w-full rounded shadow-lg bg-white hover:bg-gray-300 dark:bg-gray-900 dark:hover:bg-gray-800 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl ring-1 mx-auto">
             <div className="relative w-full max-w-[300px] h-[400px] mx-auto p-2">
                 <Image 
                     src={imageUrl} 
