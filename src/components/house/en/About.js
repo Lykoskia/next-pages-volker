@@ -18,7 +18,7 @@ export default function About() {
                     alt="My significant other and me"
                     width={1000}
                     height={450}
-                    className="my-4 lg:w-2/3 p-2 shadow-lg border border-gray-300 dark:border-gray-700"
+                    className="my-4 max-w-screen-md p-2 shadow-lg border border-gray-300 dark:border-gray-700"
                 />
             </figure>
             <p className="text-justify mb-5">We – my partner and I – came to Croatia for the first time in May 2021. We wanted to go to Italy, but the borders were closed at the time because of Corona. Since the Mediterranean was important to us, we decided on open Croatia.</p>

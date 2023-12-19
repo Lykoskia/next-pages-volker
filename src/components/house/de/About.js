@@ -18,7 +18,7 @@ export default function About() {
                     alt="Meine Lebensgefährtin und ich"
                     width={1000}
                     height={450}
-                    className="my-4 lg:w-2/3 p-2 shadow-lg border border-gray-300 dark:border-gray-700"
+                    className="my-4 max-w-screen-md p-2 shadow-lg border border-gray-300 dark:border-gray-700"
                 />
             </figure>
             <p className="text-justify mb-5">Wir – meine Lebensgefährtin und ich – kamen im Mai 2021 zum ersten Mal nach Kroatien. Wir wollten nach Italien, doch wegen Corona waren die Grenzen damals dicht. Da uns das Mittelmeer wichtig war, entschieden wir uns für das geöffnete Kroatien.</p>

@@ -18,7 +18,7 @@ export default function About() {
                     alt="Moja draga i ja"
                     width={1000}
                     height={450}
-                    className="my-4 lg:w-2/3 p-2 shadow-lg border border-gray-300 dark:border-gray-700"
+                    className="my-4 max-w-screen-md p-2 shadow-lg border border-gray-300 dark:border-gray-700"
                 />
             </figure>
             <p className="text-justify mb-5">Mi – moja draga i ja – prvi put smo došli u Hrvatsku u svibnju 2021. Htjeli smo ići u Italiju, ali su granice tada bile zatvorene zbog korone. Budući da nam je Mediteran bio važan, odlučili smo se za otvorenu Hrvatsku.</p>

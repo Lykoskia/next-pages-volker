@@ -21,7 +21,7 @@ export default function Area() {
                     height={850}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 800px"
                     priority
-                    className="my-4 max-w-screen-lg p-2 shadow-lg border border-gray-300 dark:border-gray-700"
+                    className="my-4 max-w-screen-md p-2 shadow-lg border border-gray-300 dark:border-gray-700"
                 />
             </figure>
             <p className="text-justify mb-5">&quot;Crikvenica: Der nach Übernachtungszahlen beliebteste Ort in der beliebtesten Region Kroatiens, der Kvarner Bucht&quot;</p>
