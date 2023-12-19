@@ -16,8 +16,8 @@ export default function About() {
                 <Image
                     src="/img/wir.jpg"
                     alt="Moja draga i ja"
-                    width={2000}
-                    height={900}
+                    width={1000}
+                    height={450}
                     className="my-4 lg:w-2/3 p-2 shadow-lg border border-gray-300 dark:border-gray-700"
                 />
             </figure>
