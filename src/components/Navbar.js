@@ -309,7 +309,7 @@ export default function Navbar() {
                                         closeHamburgerMenu();
                                     }}
                                 >
-                                    <span className="float-left text-red-700 dark:text-sky-200 border-b border-gray-300 dark:border-gray-700 mb-2 px-3 py-1">
+                                    <span className="uppercase float-left text-red-700 dark:text-sky-200 border-b border-gray-300 dark:border-gray-700 mb-2 px-3 py-1">
                                         {translations[section.path.replace(/^\//, '')] || capitalizeFirstLetter(section.path.replace(/^\//, ''))} &rarr;
                                     </span>
                                 </NavLink>
@@ -324,7 +324,7 @@ export default function Navbar() {
                                         }}
                                         className='rounded-md text-base font-bold'
                                     >
-                                        <span className="flex items-center px-2 w-full">
+                                        <span className="uppercase flex items-center px-2 w-full">
                                             {item.icon && <span className="mr-1">{item.icon}</span>}
                                             {translations[item.name] || item.name}
                                         </span>
