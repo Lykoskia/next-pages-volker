@@ -12,7 +12,7 @@ export default function About() {
 
         <React.Fragment>
             <h1 className="font-bold text-2xl lg:text-3xl text-center my-4 uppercase">O nama – prodavačima</h1>
-            <figure className="flex justify-center my-4">
+            <figure className="max-w-full flex justify-center my-4">
                 <Image
                     src="/img/wir.jpg"
                     alt="Moja draga i ja"
