@@ -52,11 +52,7 @@ export default function Photos() {
 
         <React.Fragment>
             <h1 className="font-bold text-2xl lg:text-3xl text-center mt-4 mb-8 uppercase">Galerija slika</h1>
-
             <Carousel slides={slides} />
-            <Gallery images={images} />
-
-
         </React.Fragment>
 
     );
@@ -66,6 +62,7 @@ export default function Photos() {
         <React.Fragment>
 
             <section className="my-8">
+                <Gallery images={images} />
                 <Carousel slides={blueprints} />
             </section>
 
