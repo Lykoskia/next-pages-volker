@@ -12,14 +12,16 @@ export default function About() {
 
         <React.Fragment>
             <h1 className="font-bold text-2xl lg:text-3xl text-center my-4 uppercase">Wir – Die Verkäufer</h1>
-            <figure className="max-w-screen-md flex justify-center my-4">
+            <figure className="flex justify-center my-4">
                 <Image
                     src="/img/wir.jpg"
                     alt="Meine Lebensgefährtin und ich"
                     width={1000}
                     height={450}
                     layout="responsive"
-                    className="justify-center my-4 p-2 shadow-lg border border-gray-300 dark:border-gray-700"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 800px"
+                    priority
+                    className="my-4 max-w-screen-md p-2 shadow-lg border border-gray-300 dark:border-gray-700"
                 />
             </figure>
             <p className="text-justify mb-5">Wir – meine Lebensgefährtin und ich – kamen im Mai 2021 zum ersten Mal nach Kroatien. Wir wollten nach Italien, doch wegen Corona waren die Grenzen damals dicht. Da uns das Mittelmeer wichtig war, entschieden wir uns für das geöffnete Kroatien.</p>
