@@ -12,14 +12,14 @@ export default function About() {
 
         <React.Fragment>
             <h1 className="font-bold text-2xl lg:text-3xl text-center my-4 uppercase">About us – the sellers</h1>
-            <figure className="max-w-full flex justify-center my-4">
+            <figure className="max-w-screen-md flex justify-center my-4">
                 <Image
                     src="/img/wir.jpg"
                     alt="My significant other and me"
                     width={1000}
                     height={450}
                     layout="responsive"
-                    className="my-4 p-2 shadow-lg border border-gray-300 dark:border-gray-700"
+                    className="justify-center my-4 p-2 shadow-lg border border-gray-300 dark:border-gray-700"
                 />
             </figure>
             <p className="text-justify mb-5">We – my partner and I – came to Croatia for the first time in May 2021. We wanted to go to Italy, but the borders were closed at the time because of Corona. Since the Mediterranean was important to us, we decided on open Croatia.</p>
