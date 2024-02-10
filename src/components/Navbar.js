@@ -182,7 +182,7 @@ export default function Navbar() {
                                             className="group flex items-center text-base font-bold text-red-700 hover:text-sky-500 dark:text-sky-200 dark:hover:text-sky-700"
                                             onClick={() => toggleDropdown(index)}
                                         >
-                                            <span className="flex items-center">
+                                            <span className="uppercase flex items-center">
                                                 {section.icon && <span className="mr-0">{section.icon}</span>}
                                                 {getMenuItemName(section.name)}
                                                 {openDropdownIndex === index ? <ChevronDoubleUpIcon className="ml-1 h-5 w-5" /> : <ChevronDoubleDownIcon className="ml-1 h-5 w-5" />}
@@ -191,7 +191,7 @@ export default function Navbar() {
                                         {/* Dropdown Items */}
                                         <div
                                             className={`${openDropdownIndex === index ? 'block' : 'hidden'}
-                                            absolute z-10 transform px-2 py-2 w-screen max-w-max sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
+                                            uppercase absolute z-10 transform px-2 py-2 w-screen max-w-max sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
                                         >
                                             <div className="rounded-lg shadow-md shadow-black dark:shadow-gray-500 ring-1 ring-red-700 dark:ring-sky-700 overflow-hidden">
                                                 <div className="relative bg-sky-100 dark:bg-sky-950 px-3 py-4 flex flex-col align-middle w-full">
@@ -202,7 +202,7 @@ export default function Navbar() {
                                                             toggleDropdown(index);
                                                         }}
                                                     >
-                                                        <span className="float-left text-red-700 dark:text-sky-200 border-b border-gray-300 dark:border-gray-700 mb-2 px-3 py-1">
+                                                        <span className="uppercase float-left text-red-700 dark:text-sky-200 border-b border-gray-300 dark:border-gray-700 mb-2 px-3 py-1">
                                                             {translations[section.path.replace(/^\//, '')] || capitalizeFirstLetter(section.path.replace(/^\//, ''))} &rarr;
                                                         </span>
                                                     </NavLink>
@@ -216,7 +216,7 @@ export default function Navbar() {
                                                                 toggleDropdown(index);
                                                             }}
                                                         >
-                                                            <span className="flex items-center px-3 my-0">
+                                                            <span className="uppercase flex items-center px-3 my-0">
                                                                 {item.icon && <span className="mr-3">{item.icon}</span>}
                                                                 {translations[item.name]}
                                                             </span>
