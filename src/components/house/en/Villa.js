@@ -77,6 +77,7 @@ export default function Villa() {
                     onClick={() => handleImageClick(image, !isSmallScreen())}
                     className="mx-auto cursor-pointer shadow-lg border border-gray-300 dark:border-gray-700 bg-gray-200 dark:bg-gray-800 hover:ring-2 hover:ring-red-700 dark:hover:ring-sky-500 rounded hover:scale-110 p-2 my-4"
                     loading="eager"
+                    priority
                 />
             </section>
         );
