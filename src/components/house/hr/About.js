@@ -41,10 +41,13 @@ export default function About() {
     );
 
     return (
-
         <section className="text-black dark:text-sky-200 p-4">
-            {previewContent}
-            {showMore && fullContent}
+            <div className={`${showMore ? 'hidden' : 'block'}`}>
+                {previewContent}
+            </div>
+            <div className={`${showMore ? 'block' : 'hidden'}`}>
+                {fullContent}
+            </div>
             <div className="text-center mt-8">
                 <button
                     onClick={() => setShowMore(!showMore)}
@@ -54,6 +57,5 @@ export default function About() {
                 </button>
             </div>
         </section>
-
     );
 }
