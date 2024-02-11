@@ -50,26 +50,34 @@ export default function Villa() {
     }, [showModal, modalRef]);
 
     const smallScreenImages = [
-        { src: '/img/1a.png', alt: 'Photo 1a' },
-        { src: '/img/2a.png', alt: 'Photo 2a' },
-        { src: '/img/3a.png', alt: 'Photo 3a' },
+        { src: '/img/1a_t.png', fullSrc: '/img/1a.png', alt: 'Photo 1a' },
+        { src: '/img/2a_t.png', fullSrc: '/img/2a.png', alt: 'Photo 2a' },
+        { src: '/img/3a_t.png', fullSrc: '/img/3a.png', alt: 'Photo 3a' },
     ];
 
     const isSmallScreen = () => window.innerWidth < 640;
 
     const handleImageClick = (image, isModal) => {
         if (isModal) {
-            openModal(image.src);
+            setSelectedImage(image.fullSrc);
+            setShowModal(true);
         } else {
-            window.open(image.src, '_blank');
+            window.open(image.fullSrc, '_blank');
         }
     };
 
-    const renderImage = (image, index) => {
-        const imgSrc = isSmallScreen() ? smallScreenImages[index].src : image.src;
+    const renderImage = (image) => {
         return (
-            <section className="block">
-                <Image src={imgSrc} alt={image.alt} width={400} height={220} priority onClick={() => handleImageClick(image, !isSmallScreen())} className="mx-auto cursor-pointer shadow-lg border border-gray-300 dark:border-gray-700 bg-gray-200 dark:bg-gray-800 hover:ring-2 hover:ring-red-700 dark:hover:ring-sky-500 rounded hover:scale-110 p-2 my-4" />
+            <section key={image.alt} className="block">
+                <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={400}
+                    height={220}
+                    onClick={() => handleImageClick(image, !isSmallScreen())}
+                    className="mx-auto cursor-pointer shadow-lg border border-gray-300 dark:border-gray-700 bg-gray-200 dark:bg-gray-800 hover:ring-2 hover:ring-red-700 dark:hover:ring-sky-500 rounded hover:scale-110 p-2 my-4"
+                    loading="lazy"
+                />
             </section>
         );
     };
