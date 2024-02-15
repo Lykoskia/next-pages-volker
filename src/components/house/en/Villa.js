@@ -167,16 +167,21 @@ export default function Villa() {
     return (
 
         <section className="text-black dark:text-sky-200 p-4">
-            {previewContent}
-            {showMore && fullContent}
-            <section className="text-center mt-8">
+            <div className={`${showMore ? 'hidden' : 'block'}`}>
+                {previewContent}
+            </div>
+            <div className={`${showMore ? 'block' : 'hidden'}`}>
+                {fullContent}
+            </div>
+            <div className="text-center mt-8">
                 <button
                     onClick={() => setShowMore(!showMore)}
-                    className={`${showMore ? 'danger-button' : 'success-button'}`}
+                    className={`${showMore ? 'danger-button' : 'success-button'}`} // Ensure you have these styles defined in your Tailwind config or as custom classes
                 >
                     {showMore ? displayLessText : displayMoreText}
                 </button>
-            </section>
+            </div>
+        </section>
             {showModal && (
                 <section className="modal">
                     <section ref={modalRef} className="modal-content">
