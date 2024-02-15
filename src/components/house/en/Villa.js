@@ -176,12 +176,11 @@ export default function Villa() {
             <div className="text-center mt-8">
                 <button
                     onClick={() => setShowMore(!showMore)}
-                    className={`${showMore ? 'danger-button' : 'success-button'}`} // Ensure you have these styles defined in your Tailwind config or as custom classes
+                    className={`${showMore ? 'danger-button' : 'success-button'}`}
                 >
                     {showMore ? displayLessText : displayMoreText}
                 </button>
             </div>
-        </section>
             {showModal && (
                 <section className="modal">
                     <section ref={modalRef} className="modal-content">
