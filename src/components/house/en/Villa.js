@@ -167,7 +167,7 @@ export default function Villa() {
     return (
 
         <section className="text-black dark:text-sky-200 p-4">
-            <div className={`${showMore ? 'hidden' : 'block'}`}>
+            <div>
                 {previewContent}
             </div>
             <div className={`${showMore ? 'block' : 'hidden'}`}>
@@ -181,21 +181,19 @@ export default function Villa() {
                     {showMore ? displayLessText : displayMoreText}
                 </button>
             </div>
-            {showModal && (
-                <section className="modal">
-                    <section ref={modalRef} className="modal-content">
-                        <span className="close" onClick={closeModal}>&times;</span>
-                        <Image
-                            src={selectedImage}
-                            alt="Finished villa"
-                            width={1000}
-                            height={550}
-                            loading="lazy"
-                            className="mx-auto p-2"
-                        />
-                    </section>
+            <section className={`${showModal ? '' : 'hidden'} modal`}>
+                <section ref={modalRef} className="modal-content">
+                    <span className="close" onClick={closeModal}>&times;</span>
+                    <Image
+                        src={selectedImage}
+                        alt="Finished villa"
+                        width={1000}
+                        height={550}
+                        loading="lazy"
+                        className="mx-auto p-2"
+                    />
                 </section>
-            )}
+            </section>
         </section>
     );
 }
