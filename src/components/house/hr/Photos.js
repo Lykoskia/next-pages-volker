@@ -73,7 +73,7 @@ export default function Photos() {
     return (
 
         <section className="text-black dark:text-sky-200 p-4">
-            <div className={`${showMore ? 'hidden' : 'block'}`}>
+            <div className="block">
                 {previewContent}
             </div>
             <div className={`${showMore ? 'block' : 'hidden'}`}>
