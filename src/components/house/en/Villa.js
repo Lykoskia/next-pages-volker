@@ -167,7 +167,7 @@ export default function Villa() {
     return (
 
         <section className="text-black dark:text-sky-200 p-4">
-            <div>
+            <div className={`${showMore ? '' : 'hidden'}`}>
                 {previewContent}
             </div>
             <div className={`${showMore ? 'block' : 'hidden'}`}>
