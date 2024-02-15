@@ -89,7 +89,7 @@ export default function Villa() {
             <p className="text-center">(Handover March / April 2024)</p>
             <section className="flex flex-wrap justify-center items-center my-4">
                 {smallScreenImages.slice(0, 3).map((image, index) => (
-                    <section key={index} className="w-1/4">
+                    <section key={index} className="w-1/4 mx-auto">
                         {renderImage(image, index)}
                     </section>
                 ))}
