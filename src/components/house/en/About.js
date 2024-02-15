@@ -42,7 +42,9 @@ export default function About() {
 
     return (
         <section className="text-black dark:text-sky-200 p-4">
-            {previewContent}
+            <div className={`${showMore ? 'hidden' : 'block'}`}>
+                {previewContent}
+            </div>
             <div className={`${showMore ? 'block' : 'hidden'}`}>
                 {fullContent}
             </div>
