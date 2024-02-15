@@ -10,6 +10,13 @@ import BackToTopButton from '@/components/BackToTopButton';
 import { useRouter } from 'next/router';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/react';
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -111,7 +118,7 @@ export default function MyApp({ Component, pageProps }) {
                 <DarkModeProvider>
                     <Navbar />
                     <section className="flex flex-col min-h-screen">
-                        <main className="flex-grow text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-gray-950 px-4 lg:px-20">
+                        <main className={`${roboto.className} flex-grow text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-gray-950 px-4 lg:px-20`}>
                             <Component {...pageProps} />
                         </main>
                     </section>
