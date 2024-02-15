@@ -181,18 +181,20 @@ export default function Villa() {
                     {showMore ? displayLessText : displayMoreText}
                 </button>
             </div>
-            <section className={`${showModal ? '' : 'hidden'} modal`}>
-                <section ref={modalRef} className="modal-content">
-                    <span className="close" onClick={closeModal}>&times;</span>
-                    <Image
-                        src={selectedImage}
-                        alt="Finished villa"
-                        width={1000}
-                        height={550}
-                        loading="lazy"
-                        className="mx-auto p-2"
-                    />
-                </section>
+            <section className={`${showModal ? '' : 'hidden'}`}>
+                <div className="modal">
+                    <section ref={modalRef} className="modal-content">
+                        <span className="close" onClick={closeModal}>&times;</span>
+                        <Image
+                            src={selectedImage}
+                            alt="Finished villa"
+                            width={1000}
+                            height={550}
+                            loading="lazy"
+                            className="mx-auto p-2"
+                        />
+                    </section>
+                </div>
             </section>
         </section>
     );
