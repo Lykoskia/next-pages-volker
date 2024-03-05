@@ -94,7 +94,6 @@ export default function Villa() {
                     </section>
                 ))}
             </section>
-            <Weather />
             <p className="text-justify mb-5 pt-5 font-bold">
                 Udaljenost od luke Crikvenica: 1.170 metara
                 <br />
@@ -158,6 +157,7 @@ export default function Villa() {
                 <li className="style-none"><ArrowLongRightIcon className="w-5 h-5 text-sky-700 inline-block" /> Pločice će biti postavljene u svibnju, do tada se kupac može odlučiti i za pločice</li>
                 <li className="style-none"><ArrowLongRightIcon className="w-5 h-5 text-sky-700 inline-block" /> Primopredaja po dogovoru</li>
             </ul>
+            <Weather />
         </React.Fragment>
 
     );
