@@ -94,7 +94,6 @@ export default function Villa() {
                     </section>
                 ))}
             </section>
-            <Weather />
             <p className="text-justify mb-5 pt-5 font-bold">
                 Entfernung zum Crikvenica-Hafen: 1.170 Meter
                 <br />
@@ -160,6 +159,7 @@ export default function Villa() {
                 <li className="style-none"><ArrowLongRightIcon className="w-5 h-5 text-sky-700 inline-block" /> im Mai werden die Fliesen verlegt, bis dahin kann der Käufer auch über die Fliesen entscheiden</li>
                 <li className="style-none"><ArrowLongRightIcon className="w-5 h-5 text-sky-700 inline-block" /> Übergabe nach Absprache</li> 
             </ul>
+            <Weather />
         </React.Fragment>
 
     );
