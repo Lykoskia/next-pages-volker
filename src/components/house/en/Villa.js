@@ -94,7 +94,6 @@ export default function Villa() {
                     </section>
                 ))}
             </section>
-            <Weather />
             <p className="text-justify mb-5 pt-5 font-bold">
                 Distance to Crikvenica Port: 1,170 meters
                 <br />
@@ -160,6 +159,7 @@ export default function Villa() {
                 <li className="style-none"><ArrowLongRightIcon className="w-5 h-5 text-sky-700 inline-block" /> The tiles will be laid in May, until then the buyer can also decide on the tiles</li>
                 <li className="style-none"><ArrowLongRightIcon className="w-5 h-5 text-sky-700 inline-block" /> Handover by arrangement</li>
             </ul>
+            <Weather />
         </React.Fragment>
 
     );
