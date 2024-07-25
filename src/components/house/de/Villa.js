@@ -14,11 +14,6 @@ export default function Villa() {
     const displayMoreText = "Weiter lesen";
     const displayLessText = "Verbergen";
 
-    const openModal = (img) => {
-        setSelectedImage(img);
-        setShowModal(true);
-    };
-
     const closeModal = () => {
         setShowModal(false);
     };
