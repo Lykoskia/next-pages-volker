@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Weather from '@/components/Weather';
+import MyMap from '@/components/Map';
 import Image from 'next/image';
 import { CheckCircleIcon, ArrowLongRightIcon } from '@heroicons/react/24/solid';
 
@@ -157,7 +158,10 @@ export default function Villa() {
                 <li className="style-none"><ArrowLongRightIcon className="w-5 h-5 text-sky-700 inline-block" /> Pločice će biti postavljene u svibnju, do tada se kupac može odlučiti i za pločice</li>
                 <li className="style-none"><ArrowLongRightIcon className="w-5 h-5 text-sky-700 inline-block" /> Primopredaja po dogovoru</li>
             </ul>
+            <br />
             <Weather />
+            <br />
+            <MyMap />
         </React.Fragment>
 
     );

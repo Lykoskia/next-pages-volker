@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Weather from '@/components/Weather';
+import MyMap from '@/components/Map';
 import Image from 'next/image';
 import { CheckCircleIcon, ArrowLongRightIcon } from '@heroicons/react/24/solid';
 
@@ -105,7 +106,6 @@ export default function Villa() {
             <p className="text-justify mb-5">Während wir nach Fertigstellung des Projektes auf die Baugenehmigung warteten, ließ ich mir anschließend von rund 15 Bauunternehmen nicht nur die Angebote für die Umsetzung der Wunsch-Villa zukommen, sondern schaute mir auch fertige Häuser von den Firmen an und sprach mit einheimischen Bekannten über deren Image und Reputationen... Dafür war es gut, dass wir seit Dezember 2021 unseren Erst-Wohnsitz in dieser Gegend hatten und ich tatsächlich (gefühlte) sieben Tage in der Woche ausschließlich für dieses Projekt nutzen konnte.</p>
             <p className="text-justify mb-5">Herausgekommen waren Verträge mit einem sehr guten Bauunternehmen und sehr guten Handwerkern; die ich nicht nahm, weil sie die günstigsten waren, sondern weil der höhere Preis mit einem noch besseren Image bei hoher Qualität zusammenkam.</p>
         </React.Fragment>
-
     );
 
     const fullContent = (
@@ -159,9 +159,11 @@ export default function Villa() {
                 <li className="style-none"><ArrowLongRightIcon className="w-5 h-5 text-sky-700 inline-block" /> im Mai werden die Fliesen verlegt, bis dahin kann der Käufer auch über die Fliesen entscheiden</li>
                 <li className="style-none"><ArrowLongRightIcon className="w-5 h-5 text-sky-700 inline-block" /> Übergabe nach Absprache</li> 
             </ul>
+            <br/>
             <Weather />
+            <br/>
+            <MyMap />
         </React.Fragment>
-
     );
 
     return (
